@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MenuPageComponent } from './components/menu-page/menu-page.component';
-import { CardapioPageComponent } from './components/cardapio-page/cardapio-page.component';
+
 
 const routes: Routes = [
   {

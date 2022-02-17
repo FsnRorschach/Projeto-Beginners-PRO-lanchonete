@@ -30,7 +30,7 @@ export class ContaPageComponent implements OnInit {
     this.enderecoService.buscaCep(cep)
       .subscribe(endereco => {
 
-        this.endereco = endereco
+        this.endereco = endereco;
 
         this.rua = this.endereco.logradouro;
         this.bairro = this.endereco.bairro;

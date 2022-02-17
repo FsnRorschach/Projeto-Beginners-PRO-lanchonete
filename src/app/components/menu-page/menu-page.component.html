@@ -1,4 +1,18 @@
 <section class="container-fluid d-flex">
+  <!-- Modal -->
+  <div class="modal fade" id="modalQRCode" tabindex="-1" aria-labelledby="modalQRCodeLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header justify-content-center align-items-center">
+          <img src="../../../assets/icon/logo-header-pro.png" width="50px" alt="frameQrCodeBgPro">
+          <h1 class="modal-title" id="modalQRCodeLabel"><strong> Beginners PRO </strong></h1>
+        </div>
+        <div class="modal-body d-flex flex-wrap justify-content-between align-items-center">
+          <img src="../../../assets/icon//frameQrCodeBgPro.png" width="500px" alt="frameQrCodeBgPro">
+        </div>
+      </div>
+    </div>
+  </div>
   <header class="fixed-top">
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-info" aria-label="Main navigation">
       <div class="container-fluid">
@@ -31,8 +45,8 @@
     </nav>
   </header>
   <section class="container-fluid align-self-center">
-    <!-- <app-home-page></app-home-page> -->
-    <app-conta-page></app-conta-page>
+    <app-home-page></app-home-page>
+    <!-- <app-conta-page></app-conta-page> -->
   </section>
   <section class="container-fluid" style="display:none">
     <div>
@@ -59,7 +73,8 @@
       <li class="ms-3"><a class="text-muted" target="Blanck" href="https://wa.me/5511972371253">
           <img src="../../../assets/icon/whatsapp.png" alt="Whatsapp">
         </a></li>
-      <li class="ms-3"><a class="text-muted" target="Blanck" href="https://beginnerspro.faculdadeiv2.com.br/">
+      <li class="ms-3"><a class="text-muted" target="Blanck" href="https://beginnerspro.faculdadeiv2.com.br/"
+          data-toggle="modal" data-target="#modalQRCode">
           <img src="../../../assets/icon//frameQrCodeBgPro.png" width="24px" alt="frameQrCodeBgPro">
         </a></li>
     </ul>
