@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router }from '@angular/router';
 
 @Component({
   selector: 'app-cardapio-page',
@@ -11,11 +12,10 @@ export class CardapioPageComponent implements OnInit {
   hotdog: number = 0;
   xtudo: number = 0;
 
-  constructor() {
-
-  }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+    this.carregaCarrinho();
   }
 
   compraHotDog(): void {
@@ -37,7 +37,25 @@ export class CardapioPageComponent implements OnInit {
     this.setLocalStorage();
   }
 
+  carregaCarrinho(){
+    this.compraStorage = localStorage.getItem('compras') ? localStorage.getItem('compras') : [];
+    console.log(JSON.parse(this.compraStorage));
+    this.compraStorage = JSON.parse(this.compraStorage);
+    if(this.compraStorage != ""){
+      this.hotdog = this.compraStorage[0].hotdog;
+      console.log(this.hotdog);
+      this.xtudo = this.compraStorage[0].xtudo;
+      console.log(this.xtudo);
+    }
+  }
+
   setLocalStorage(): void {
+    localStorage.removeItem("compras");
     localStorage.setItem("compras", JSON.stringify(this.compraStorage));
+    this.goToPagarPage();
+  }
+
+  goToPagarPage() {
+    this.router.navigate(['/pagar']);
   }
 }

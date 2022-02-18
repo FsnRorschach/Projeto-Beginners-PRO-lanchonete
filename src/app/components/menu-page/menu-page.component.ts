@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import * as bootstrap from "bootstrap";
 import * as $ from 'jquery';
 
 @Component({
@@ -15,21 +14,15 @@ export class MenuPageComponent implements OnInit {
 
   ngOnInit(): void {
     $(function () {
-
       $('[data-toggle="modal"]').hover(function () {
         var modalId: any = $(this).data('target');
         $(modalId).modal('show');
-
       });
-
     });
   }
 
   goToHomePage() {
     this.router.navigate(['/home-page']);
   }
-
-
-
 }
 

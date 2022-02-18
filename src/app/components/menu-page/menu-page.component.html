@@ -16,7 +16,7 @@
   <header class="fixed-top">
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-info" aria-label="Main navigation">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Lanchão do fominha</a>
+        <a class="navbar-brand" routerLink="">Lanchão do fominha</a>
         <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="offcanvas"
           data-bs-target="#navbarsExampleDefault" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -25,19 +25,19 @@
         <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#" id="header-home">Home</a>
+              <a class="nav-link active" aria-current="page" routerLink="" routerLinkActive="router-link-active" id="header-home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#" id="header-cadastro">Conta</a>
+              <a class="nav-link" aria-current="page" routerLink="/cadastro" id="header-cadastro">Conta</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#" id="header-cardapio">Cardápio</a>
+              <a class="nav-link" aria-current="page" routerLink="/cardapio" id="header-cardapio">Cardápio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#" id="header-faca-pedidos">Faça Pedidos</a>
+              <a class="nav-link" aria-current="page" routerLink="/pagar" id="header-faca-pedidos">Pagar Pedidos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#" id="header-meus-pedidos">Meus Pedidos</a>
+              <a class="nav-link" aria-current="page" routerLink="/meus-pedidos" id="header-meus-pedidos">Meus Pedidos</a>
             </li>
           </ul>
         </div>
@@ -45,8 +45,6 @@
     </nav>
   </header>
   <section class="container-fluid align-self-center">
-    <app-home-page></app-home-page>
-    <!-- <app-conta-page></app-conta-page> -->
   </section>
   <section class="container-fluid" style="display:none">
     <div>

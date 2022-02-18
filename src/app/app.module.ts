@@ -12,6 +12,7 @@ import { ContaPageComponent } from './components/conta-page/conta-page.component
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { PagarPageComponent } from './components/pagar-page/pagar-page.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     MenuPageComponent,
     CardapioPageComponent,
     HomePageComponent,
-    ContaPageComponent
+    ContaPageComponent,
+    PagarPageComponent
   ],
   imports: [
     BrowserModule,
