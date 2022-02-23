@@ -9,8 +9,10 @@ import * as $ from 'jquery';
 })
 export class PagarPageComponent implements OnInit {
 
-  arrayLocalStorage: any = [];
-  
+  comprasLocalStorage: any = [];
+  hotDog: number = 0;
+  xtudo: number = 0;
+
   constructor(private router: Router) { }
 
   ngOnInit(): void {
@@ -18,12 +20,15 @@ export class PagarPageComponent implements OnInit {
     this.verificaPedido();
   }
 
-  carregaCarrinho(){
-    this.arrayLocalStorage = localStorage.getItem('compras') ? localStorage.getItem('compras') : [];
+  carregaCarrinho(): void {
+    this.comprasLocalStorage = JSON.parse(localStorage.getItem('compras') as string);
+    console.log(this.comprasLocalStorage);
+    this.hotDog = this.comprasLocalStorage.hotdog;
+    this.xtudo = this.comprasLocalStorage.xtudo;
   }
 
   verificaPedido(){
-    if(this.arrayLocalStorage == ''){
+    if(this.comprasLocalStorage == ''){
       console.log("Entrou na função verifica array");
       $('#modal-paga-page').modal('show');
       this.goToHomePage();

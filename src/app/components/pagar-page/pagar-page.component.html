@@ -1,17 +1,23 @@
-<section>
-    <div>
-        <div class="table-responsive-lg">
-            <table class="table">
+<section  id="section-conta-page">
+    <div class="table-responsive-lg">
+        <table class="table">
+            <tbody>
                 <tr>
-                    <th scope="row">1</th>
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    <td><span class="material-icons">
-                        delete
-                        </span></td>
-                  </tr>
-            </table>
-          </div>
+                    <td>
+                        <div class="input-group input-group-lg">
+                            <span class="input-group-text bg-success text-white" id="inputGroup-sizing-lg" style="width:115px;">Hot-Dog:</span>
+                            <input type="text" [(ngModel)]="hotDog" [ngModelOptions]="{standalone:true}" readonly>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group input-group-lg">
+                            <span class="input-group-text bg-success text-white" id="inputGroup-sizing-lg" style="width:115px">X-tudo:</span>
+                            <input type="text" [(ngModel)]="xtudo" [ngModelOptions]="{standalone:true}" readonly>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <!-- Modal paga-page-->
     <div class="modal fade" id="modal-paga-page" tabindex="-1" aria-labelledby="modal-paga-page-Label" aria-hidden="true">

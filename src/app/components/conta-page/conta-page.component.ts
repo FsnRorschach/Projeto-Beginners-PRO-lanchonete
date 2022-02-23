@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import * as bootstrap from 'bootstrap';
+import { Toast } from 'bootstrap';
 import { BuscaEnderecoService } from 'src/app/services/busca-endereco.service';
 
 @Component({
@@ -7,6 +9,9 @@ import { BuscaEnderecoService } from 'src/app/services/busca-endereco.service';
   styleUrls: ['./conta-page.component.scss']
 })
 export class ContaPageComponent implements OnInit {
+
+  toastModal: any  = document.getElementById('liveToast');
+  cadastroStorage: any = [];
 
   nome: string = '';
   sobrenome: string = '';
@@ -40,7 +45,7 @@ export class ContaPageComponent implements OnInit {
   }
 
   salvarCadastro(): void {
-    const cad = {
+    this.cadastroStorage = {
       nome: this.nome,
       sobrenome: this.sobrenome,
       telefone: this.telefone,
@@ -52,6 +57,11 @@ export class ContaPageComponent implements OnInit {
       cidade: this.cidade,
       estado: this.uf
     }
-    console.log(cad);
+    this.setLocalStorage();
+  }
+
+  setLocalStorage(): void {
+    localStorage.removeItem("cadastro");
+    localStorage.setItem("cadastro", JSON.stringify(this.cadastroStorage));
   }
 }

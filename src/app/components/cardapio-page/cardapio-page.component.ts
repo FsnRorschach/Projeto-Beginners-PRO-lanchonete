@@ -28,11 +28,22 @@ export class CardapioPageComponent implements OnInit {
     console.log(this.xtudo);
   }
 
+  removeItemX(): void {
+    this.xtudo -= 1;
+    console.log(this.xtudo);
+  }
+
+  removeItemH(): void {
+    this.hotdog -= 1;
+    console.log(this.hotdog);
+  }
+
   finalizaCompra(): void {
-    this.compraStorage.push({
+    this.compraStorage = {
       hotdog: this.hotdog,
       xtudo: this.xtudo
-    })
+    }
+
     console.log(this.compraStorage);
     this.setLocalStorage();
   }
@@ -42,9 +53,9 @@ export class CardapioPageComponent implements OnInit {
     console.log(JSON.parse(this.compraStorage));
     this.compraStorage = JSON.parse(this.compraStorage);
     if(this.compraStorage != ""){
-      this.hotdog = this.compraStorage[0].hotdog;
+      this.hotdog = this.compraStorage.hotdog;
       console.log(this.hotdog);
-      this.xtudo = this.compraStorage[0].xtudo;
+      this.xtudo = this.compraStorage.xtudo;
       console.log(this.xtudo);
     }
   }
