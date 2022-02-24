@@ -10,7 +10,7 @@ import { BuscaEnderecoService } from 'src/app/services/busca-endereco.service';
 })
 export class ContaPageComponent implements OnInit {
 
-  toastModal: any  = document.getElementById('liveToast');
+  toastModal: any = document.getElementById('liveToast');
   cadastroStorage: any = [];
 
   nome: string = '';
@@ -63,5 +63,19 @@ export class ContaPageComponent implements OnInit {
   setLocalStorage(): void {
     localStorage.removeItem("cadastro");
     localStorage.setItem("cadastro", JSON.stringify(this.cadastroStorage));
+    this.limparForm();
+  }
+
+  limparForm(): void {
+    this.nome = '';
+    this.sobrenome = '';
+    this.telefone = '';
+    this.cpf = '';
+    this.cep = '';
+    this.rua = '';
+    this.numero = '';
+    this.bairro = '';
+    this.cidade = '';
+    this.uf = '';
   }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router }from '@angular/router';
+import { Router } from '@angular/router';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-cardapio-page',
@@ -16,26 +17,49 @@ export class CardapioPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.carregaCarrinho();
+    this.blockCarrinho();
   }
 
   compraHotDog(): void {
     this.hotdog += 1;
-    console.log(this.hotdog);
+    this.blockCarrinho();
+    this.compraStorage = {
+      hotdog: this.hotdog,
+      xtudo: this.xtudo
+    }
+    this.setLocalStorage();
   }
 
   comprarXtudo(): void {
     this.xtudo += 1;
-    console.log(this.xtudo);
+    this.blockCarrinho();
+    this.compraStorage = {
+      hotdog: this.hotdog,
+      xtudo: this.xtudo
+    }
+    this.setLocalStorage();
   }
 
   removeItemX(): void {
     this.xtudo -= 1;
-    console.log(this.xtudo);
+    this.xtudo = this.xtudo >= 0 ? this.xtudo : 0;
+    this.blockCarrinho();
+  }
+
+  blockCarrinho() {
+    if (this.xtudo == 0 && this.hotdog == 0) {
+      $('#btnfinaliza-cardapio-page').prop('disabled', true);
+      this.compraStorage = [];
+      localStorage.setItem("compras", JSON.stringify(this.compraStorage));
+    } else {
+      $('#btnfinaliza-cardapio-page').prop('disabled', false);
+    }
   }
 
   removeItemH(): void {
     this.hotdog -= 1;
-    console.log(this.hotdog);
+    this.hotdog = this.hotdog >= 0 ? this.hotdog : 0;
+    this.blockCarrinho();
   }
 
   finalizaCompra(): void {
@@ -43,16 +67,15 @@ export class CardapioPageComponent implements OnInit {
       hotdog: this.hotdog,
       xtudo: this.xtudo
     }
-
-    console.log(this.compraStorage);
     this.setLocalStorage();
+    this.goToPagarPage();
   }
 
-  carregaCarrinho(){
+  carregaCarrinho() {
     this.compraStorage = localStorage.getItem('compras') ? localStorage.getItem('compras') : [];
     console.log(JSON.parse(this.compraStorage));
     this.compraStorage = JSON.parse(this.compraStorage);
-    if(this.compraStorage != ""){
+    if (this.compraStorage != "") {
       this.hotdog = this.compraStorage.hotdog;
       console.log(this.hotdog);
       this.xtudo = this.compraStorage.xtudo;
@@ -63,7 +86,6 @@ export class CardapioPageComponent implements OnInit {
   setLocalStorage(): void {
     localStorage.removeItem("compras");
     localStorage.setItem("compras", JSON.stringify(this.compraStorage));
-    this.goToPagarPage();
   }
 
   goToPagarPage() {

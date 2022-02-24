@@ -3,14 +3,48 @@
 html,
 body {
   height: 100%;
+  min-width: 440px !important;
 }
 
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background: url("assets/img//fundo-cadastro.jpg");
+  background: url("assets/img/fundofull.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+/* min-width */
+@media screen and (min-width: 690px) {
+  body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background: url("assets/img/fundofull.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+/* min-width & max-width */
+@media screen and (min-width: 440px) and (max-width: 689px) {
+  body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background: url("assets/img/fundofull.jpg");
+    background-repeat: initial;
+    background-size: auto;
+  }
+}
+
+/* max device width */
+@media screen and (max-device-width: 440px) {
+  body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background: url("assets/img/fundofull.jpg");
+    background-repeat: initial;
+    background-size: auto;
+  }
 }
 
 /* Importing Bootstrap SCSS file. */

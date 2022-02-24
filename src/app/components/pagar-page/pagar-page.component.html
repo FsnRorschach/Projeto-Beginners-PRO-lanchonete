@@ -1,36 +1,42 @@
-<section  id="section-conta-page">
-    <div class="table-responsive-lg">
-        <table class="table">
-            <tbody>
-                <tr>
-                    <td>
-                        <div class="input-group input-group-lg">
-                            <span class="input-group-text bg-success text-white" id="inputGroup-sizing-lg" style="width:115px;">Hot-Dog:</span>
-                            <input type="text" [(ngModel)]="hotDog" [ngModelOptions]="{standalone:true}" readonly>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="input-group input-group-lg">
-                            <span class="input-group-text bg-success text-white" id="inputGroup-sizing-lg" style="width:115px">X-tudo:</span>
-                            <input type="text" [(ngModel)]="xtudo" [ngModelOptions]="{standalone:true}" readonly>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+<section id="section-conta-page">
+  <div class="table-responsive-lg md-3 d-flex flex-wrap justify-content-around">
+    <div class="input-group input-group-lg g-col-6" style="width: 250px; height: 250px">
+      <span class="input-group-text bg-success text-white justify-content-center" id="inputGroup-sizing-lg"
+        style="width:250px;">Hot-Dog:</span>
+      <input type="text" [(ngModel)]="hotDog" [ngModelOptions]="{standalone:true}" style="width:250px" readonly>
     </div>
-    <!-- Modal paga-page-->
-    <div class="modal fade" id="modal-paga-page" tabindex="-1" aria-labelledby="modal-paga-page-Label" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header justify-content-center align-items-center">
-                    <img src="../../../assets/icon/logo-header-pro.png" width="50px" alt="frameQrCodeBgPro">
-                    <h1 class="modal-title" id="modalQRCodeLabel"><strong> Beginners PRO </strong></h1>
-                </div>
-                <div class="modal-body d-flex flex-wrap justify-content-between align-items-center">
-                    <h3><strong>Carrinho vazio 😔🍔🍔</strong></h3>
-                </div>
-            </div>
+    <div class="input-group input-group-lg g-col-6" style="width: 250px; height: 250px">
+      <span class="input-group-text bg-success text-white justify-content-center" id="inputGroup-sizing-lg"
+        style="width:250px">X-tudo:</span>
+      <input type="text" [(ngModel)]="xtudo" [ngModelOptions]="{standalone:true}" style="width:250px" readonly>
+    </div>
+  </div>
+  <div class="md-3 d-flex flex-wrap justify-content-around" id="div-container-card2-home-page">
+    <div class="card">
+      <button type="button" (click)="cancelar()" class="btn btn-danger rounded border-0"
+        style="width: 250px; height: 250px">
+        Cancelar
+      </button>
+    </div>
+    <div class="card">
+      <button type="button" (click)="pagar()" id="btnpagar-pagar-page" class="btn btn-success rounded border-0"
+        style="width: 250px; height: 250px">
+        Pagar
+      </button>
+    </div>
+  </div>
+  <!-- Modal paga-page-->
+  <div class="modal fade" id="modal-paga-page" tabindex="-1" aria-labelledby="modal-paga-page-Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header justify-content-center align-items-center">
+          <img src="../../../assets/icon/logo-header-pro.png" width="50px" alt="frameQrCodeBgPro">
+          <h1 class="modal-title" id="modalQRCodeLabel"><strong> Beginners PRO </strong></h1>
         </div>
+        <div class="modal-body d-flex flex-wrap justify-content-between align-items-center">
+          <h3 [(ngModel)]="textModal" [ngModelOptions]="{standalone:true}"><strong>{{textModal}}</strong></h3>
+        </div>
+      </div>
     </div>
+  </div>
 </section>

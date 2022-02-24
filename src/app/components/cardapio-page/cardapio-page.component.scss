@@ -1,19 +1,78 @@
-#div-container-cardapio-page {
-  margin: 70px 25px 30px;
-}
-
-#div-btnfinaliza-cardapio-page {
-  margin-bottom: 155px;
-}
-
-#card {
-  background: rgba(255, 255, 255, 1.0);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 10px;
-}
-
 #spanRemoveItemH,
-#spanRemoveItemX{
+#spanRemoveItemX {
   cursor: pointer;
+}
+
+// media 
+
+/* max device width */
+@media screen and (max-device-width: 440px) {
+  #div-container-cardapio-page {
+    margin: 70px 25px 30px;
+  }
+
+  #div-btnfinaliza-cardapio-page {
+    margin-bottom: 155px;
+  }
+
+  #card {
+    background: rgba(255, 255, 255, 1.0);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+  }
+}
+
+/* min-width & max-width */
+@media screen and (min-width: 440px) and (max-width: 566px) {
+  #div-container-cardapio-page {
+    margin: 70px 25px 30px;
+  }
+
+  #div-btnfinaliza-cardapio-page {
+    margin-bottom: 155px;
+  }
+
+  #card {
+    background: rgba(255, 255, 255, 1.0);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+  }
+}
+
+/* min-width & max-width */
+@media screen and (min-width: 567px) and (max-width: 666px) {
+  #div-container-cardapio-page {
+    margin: 70px 25px 30px;
+  }
+
+  #div-btnfinaliza-cardapio-page {
+    margin-bottom: 155px;
+  }
+
+  #card {
+    background: rgba(255, 255, 255, 1.0);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+  }
+}
+
+/* min-width */
+@media screen and (min-width: 667px) {
+  #div-container-cardapio-page {
+    margin: 70px 25px 30px;
+  }
+
+  #div-btnfinaliza-cardapio-page {
+    margin-bottom: 155px;
+  }
+
+  #card {
+    background: rgba(255, 255, 255, 1.0);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+  }
 }

@@ -4,13 +4,16 @@
     <div class="card-body d-flex flex-column">
       <h3 class="card-title"><strong>Hot dog</strong></h3>
       <p class="card-text">2 salsichas, bacon, calabresinha, tomate, batata palha.</p>
-      <button class="btn btn-info" (click)="compraHotDog()">Comprar</button>
+      <button class="btn btn-info" (click)="compraHotDog()">Adicionar</button>
     </div>
     <div class="input-group input-group-lg">
-      <span class="input-group-text bg-success text-white" id="inputGroup-sizing-lg" style="width:115px;">Hot-Dog:</span>
-      <input type="text" id="hotdog"  class="form-control  text-center" [(ngModel)]="hotdog" [ngModelOptions]="{standalone:true}"
-        aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" readonly>
-        <span class="material-icons input-group-text bg-danger text-white" id="spanRemoveItemH" (click)="removeItemH()" style="width:40px">clear</span>
+      <span class="input-group-text bg-success text-white" id="inputGroup-sizing-lg"
+        style="width:115px;">Hot-Dog:</span>
+      <input type="text" id="hotdog" class="form-control  text-center" [(ngModel)]="hotdog"
+        [ngModelOptions]="{standalone:true}" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"
+        readonly>
+      <span class="material-icons input-group-text bg-danger text-white" id="spanRemoveItemH" (click)="removeItemH()"
+        style="width:40px">clear</span>
     </div>
   </div>
   <div class="card" style="width: 300px;">
@@ -19,17 +22,19 @@
       <h3 class="card-title"><strong>X-tudo</strong></h3>
       <p class="card-text">Hamburguer, bacon, ovo, queijo, presunto, milho, ervilha, tomate, alface, batata
         palha.</p>
-      <button class="btn btn-info" (click)="comprarXtudo()">Comprar</button>
+      <button class="btn btn-info" (click)="comprarXtudo()">Adicionar</button>
     </div>
     <div class="input-group input-group-lg">
       <span class="input-group-text bg-success text-white" id="inputGroup-sizing-lg" style="width:115px">X-tudo:</span>
-      <input type="text" id="xtudo"  class="form-control text-center" [(ngModel)]="xtudo" [ngModelOptions]="{standalone:true}"
-        aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" readonly>
-        <span class="material-icons input-group-text bg-danger text-white" id="spanRemoveItemX" (click)="removeItemX()" style="width:40px">clear</span>
+      <input type="text" id="xtudo" class="form-control text-center" [(ngModel)]="xtudo"
+        [ngModelOptions]="{standalone:true}" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"
+        readonly>
+      <span class="material-icons input-group-text bg-danger text-white" id="spanRemoveItemX" (click)="removeItemX()"
+        style="width:40px">clear</span>
     </div>
   </div>
   <div class="d-flex align-items-end justify-content-center " id="div-btnfinaliza-cardapio-page">
-    <button class="btn btn-success" (click)="finalizaCompra()">Finaliza Compra</button>
+    <button class="btn btn-success" id="btnfinaliza-cardapio-page" (click)="finalizaCompra()"
+      style="width:200px; height: 200px">Carrinho</button>
   </div>
 </div>
-

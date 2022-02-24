@@ -25,20 +25,20 @@
         <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" routerLink="" routerLinkActive="router-link-active"
+              <a class="nav-link active" aria-current="page" (click)="home()" routerLinkActive="router-link-active"
                 id="header-home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" routerLink="/cadastro" id="header-cadastro">Conta</a>
+              <a class="nav-link" aria-current="page" (click)="conta()" id="header-cadastro">Conta</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" routerLink="/cardapio" id="header-cardapio">Cardápio</a>
+              <a class="nav-link" aria-current="page" (click)="cardapio()" id="header-cardapio">Cardápio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" routerLink="/pagar" id="header-faca-pedidos">Pagar Pedidos</a>
+              <a class="nav-link" aria-current="page" (click)="carrinho()" id="header-faca-pedidos">Carrinho</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" routerLink="/meus-pedidos" id="header-meus-pedidos">Meus
+              <a class="nav-link" aria-current="page" id="header-meus-pedidos">Meus
                 Pedidos</a>
             </li>
           </ul>
