@@ -4,11 +4,18 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { CardapioPageComponent } from './components/cardapio-page/cardapio-page.component';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './auth/auth.guard';
+import { LoginPageComponent } from './components/login-page/login-page.component';
 
 
 const routes: Routes = [
   {
+    path: 'login',
+    component: LoginPageComponent
+  },
+  {
     path: "",
+    canActivate: [AuthGuard],
     component: HomePageComponent
   },
   {
@@ -22,7 +29,12 @@ const routes: Routes = [
   {
     path: 'pagar',
     component: PagarPageComponent
-  }
+  },
+  {
+    path: '**',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
 ];
 
 @NgModule({

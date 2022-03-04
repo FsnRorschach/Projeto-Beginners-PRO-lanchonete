@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "snack-bar-fominha": {
+      "hosting": {
+        "projetolevel13": [
+          "snack-bar-fominha"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "snack-bar-fominha"
+  }
+}

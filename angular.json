@@ -108,6 +108,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "projetolevel13:build:production",
+            "firebaseProject": "snack-bar-fominha",
+            "firebaseHostingSite": "snack-bar-fominha"
+          }
         }
       }
     }
