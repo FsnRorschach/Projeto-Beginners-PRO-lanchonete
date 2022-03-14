@@ -22,6 +22,7 @@ export class HomePageComponent implements OnInit {
   }
 
   carrinho() {
+    console.log("entrou no click carrinho")
     if (this.hotDog == 0 && this.xtudo == 0) {
       $('#modal-home-page').modal('show');
       this.textModal = "Carrinho vazio 😔"
@@ -34,6 +35,12 @@ export class HomePageComponent implements OnInit {
     this.comprasLocalStorage = JSON.parse(localStorage.getItem('compras') as string);
     this.hotDog = this.comprasLocalStorage.hotdog ? this.comprasLocalStorage.hotdog : 0;
     this.xtudo = this.comprasLocalStorage.xtudo ? this.comprasLocalStorage.xtudo : 0;
+    $('.modal-backdrop').hide();
+    if (this.hotDog == 0 && this.xtudo == 0) {
+      $('#btnfinaliza-home-page').prop('disabled', true);
+    } else {
+      $('#btnfinaliza-home-page').prop('disabled', false);
+    }
   }
 
   goToPagarPage() {

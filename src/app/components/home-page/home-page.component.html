@@ -2,7 +2,8 @@
   <div id="div-container-home-page">
     <div class="md-3 d-flex flex-wrap justify-content-around" id="div-container-card1-home-page">
       <div class="card">
-        <button type="button" class="btn btn-info rounded border-0" style="width: 250px; height: 250px">
+        <button type="button" class="btn btn-info rounded border-0" style="width: 250px; height: 250px"
+          routerLink="/cadastro">
           Minha Conta
         </button>
       </div>
@@ -15,9 +16,9 @@
     </div>
     <div class="md-3 d-flex flex-wrap justify-content-around" id="div-container-card2-home-page">
       <div class="card">
-        <button type="button" class="btn btn-info rounded border-0" style="width: 250px; height: 250px"
-          (click)="carrinho()">
-          Pagar
+        <button type="button" id="btnfinaliza-home-page" class="btn btn-info rounded border-0"
+          style="width: 250px; height: 250px" (click)="carrinho()">
+          Carrinho
         </button>
       </div>
       <div class="card">
@@ -41,4 +42,5 @@
       </div>
     </div>
   </div>
+
 </div>

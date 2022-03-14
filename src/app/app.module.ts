@@ -17,9 +17,10 @@ import { PagarPageComponent } from './components/pagar-page/pagar-page.component
 import { LoginPageComponent } from './components/login-page/login-page.component';
 
 // Firebase
-import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularFireStorageModule } from "@angular/fire/storage";
+import { initializeApp } from 'firebase/app';
+// import { AngularFireModule } from '@angular/fire';
+// import { AngularFirestoreModule } from '@angular/fire/firestore';
+// import { AngularFireStorageModule } from "@angular/fire/storage";
 
 @NgModule({
   declarations: [
@@ -39,10 +40,10 @@ import { AngularFireStorageModule } from "@angular/fire/storage";
     FormsModule,
     HttpClientModule,
 
-    // Firebase
-    AngularFirestoreModule,
-    AngularFireStorageModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
+    // // Firebase
+    // AngularFirestoreModule,
+    // AngularFireStorageModule,
+    // AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
   providers: [],
   bootstrap: [AppComponent]

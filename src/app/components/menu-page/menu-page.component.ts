@@ -43,10 +43,13 @@ export class MenuPageComponent implements OnInit {
   }
 
   carrinho() {
+    console.log("entrou no click carrinho");
     this.togglernavClose();
+    console.log("entrou no click carrinho " + this.hotDog);
+    console.log("entrou no click carrinho " + this.xtudo);
     if (this.hotDog == 0 && this.xtudo == 0) {
       $('#modal-home-page').modal('show');
-      this.textModal = "Carrinho vazio 😔"
+      this.textModal = "Carrinho vazio 😔";
     } else {
       this.goToPagarPage();
     }

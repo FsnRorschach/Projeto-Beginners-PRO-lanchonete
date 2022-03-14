@@ -56,15 +56,16 @@ export class PagarPageComponent implements OnInit {
   }
 
   pagar() {
-    console.log("Entrou no comprar lanche")
-    this.compraFechada = {
-      hotdog: this.hotDog,
-      xtudo: this.xtudo
-    }
+    console.log("Entrou no comprar lanche");
     $('#modal-paga-page').modal('show');
-    this.textModal = "Pagamento efetuado com Sucesso! Bom apetite. 🥳	🍔"
-    this.goToHomePage();
-
+    this.textModal = "Pagamento efetuado com Sucesso! Bom apetite. 🥳	🍔";
+    this.hotDog = 0;
+    this.xtudo = 0;
+    localStorage.setItem("compras", JSON.stringify(''));
+    this.blockCarrinho();
+    setTimeout(() => {
+      this.goToHomePage();
+    }, 5000);
   }
 
   cancelar() {

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../../auth/auth.service';
+// import { AuthService } from '../../auth/auth.service';
 
 @Component({
   selector: 'app-login-page',
@@ -10,16 +10,16 @@ import { AuthService } from '../../auth/auth.service';
 export class LoginPageComponent implements OnInit {
 
   constructor(
-    private _authService: AuthService,
+    // private _authService: AuthService,
     private router: Router
   ) { }
 
   ngOnInit(): void {
   }
 
-  entrarComGoogle() {
-    this._authService.entrarComGoogle()
-      .then(() => this.router.navigateByUrl('home'));
-  }
+  // entrarComGoogle() {
+  //   this._authService.entrarComGoogle()
+  //     .then(() => this.router.navigateByUrl('home'));
+  // }
 
 }
